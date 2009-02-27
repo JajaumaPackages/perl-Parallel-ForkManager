@@ -1,6 +1,6 @@
 Name:           perl-Parallel-ForkManager
 Version:        0.7.5
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        Simple parallel processing fork manager
 License:        GPL+ or Artistic
 Group:          Development/Libraries
@@ -57,6 +57,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man3/*
 
 %changelog
+* Thu Feb 26 2009 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 0.7.5-3
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_11_Mass_Rebuild
+
 * Thu Mar 06 2008 Tom "spot" Callaway <tcallawa@redhat.com> - 0.7.5-2
 Rebuild for new perl
 
