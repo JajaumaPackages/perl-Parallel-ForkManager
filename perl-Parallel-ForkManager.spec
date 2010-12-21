@@ -1,6 +1,6 @@
 Name:           perl-Parallel-ForkManager
 Version:        0.7.5
-Release:        6%{?dist}
+Release:        7%{?dist}
 Summary:        Simple parallel processing fork manager
 License:        GPL+ or Artistic
 Group:          Development/Libraries
@@ -57,6 +57,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man3/*
 
 %changelog
+* Tue Dec 21 2010 Marcela Maslanova <mmaslano@redhat.com> - 0.7.5-7
+- 661697 rebuild for fixing problems with vendorach/lib
+
 * Tue May 04 2010 Marcela Maslanova <mmaslano@redhat.com> - 0.7.5-6
 - Mass rebuild with perl-5.12.0
 
