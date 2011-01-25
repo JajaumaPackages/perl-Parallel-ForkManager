@@ -1,12 +1,11 @@
 Name:           perl-Parallel-ForkManager
-Version:        0.7.5
-Release:        7%{?dist}
+Version:        0.7.9
+Release:        1%{?dist}
 Summary:        Simple parallel processing fork manager
 License:        GPL+ or Artistic
 Group:          Development/Libraries
 URL:            http://search.cpan.org/dist/Parallel-ForkManager/
-Source0:        http://www.cpan.org/modules/by-module/Parallel/Parallel-ForkManager-%{version}.tar.gz
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
+Source0:        http://search.cpan.org/CPAN/authors/id/D/DL/DLUX/Parallel-ForkManager-%{version}.tar.gz
 BuildArch:      noarch
 BuildRequires:  perl(ExtUtils::MakeMaker)
 Requires:       perl(:MODULE_COMPAT_%(eval "`%{__perl} -V:version`"; echo $version))
@@ -21,11 +20,8 @@ use is a downloader which will be retrieving hundreds/thousands of files.
 
 # Prepare the example scripts for inclusion as documentation, as they are not
 # generally useful and have additional dependencies.
-mkdir examples
-sed -i -e '1d' ForkManager/*.pl
-chmod 644 ForkManager/*.pl
-mv ForkManager/*.pl examples
-rmdir ForkManager
+sed -i -e '1d' examples/*.pl
+chmod 644 examples/*.pl
 
 i=ForkManager.pm
 iconv -f iso-8859-1 -t utf-8 < $i > $i. && touch -r $i $i. && mv -f $i. $i
@@ -35,20 +31,15 @@ iconv -f iso-8859-1 -t utf-8 < $i > $i. && touch -r $i $i. && mv -f $i. $i
 make %{?_smp_mflags}
 
 %install
-rm -rf $RPM_BUILD_ROOT
+make pure_install PERL_INSTALL_ROOT=%{buildroot}
 
-make pure_install PERL_INSTALL_ROOT=$RPM_BUILD_ROOT
+find %{buildroot} -type f -name .packlist -exec rm -f {} \;
+find %{buildroot} -depth -type d -exec rmdir {} 2>/dev/null \;
 
-find $RPM_BUILD_ROOT -type f -name .packlist -exec rm -f {} \;
-find $RPM_BUILD_ROOT -depth -type d -exec rmdir {} 2>/dev/null \;
-
-%{_fixperms} $RPM_BUILD_ROOT/*
+%{_fixperms} %{buildroot}/*
 
 %check
 make test
-
-%clean
-rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(-,root,root,-)
@@ -57,6 +48,11 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man3/*
 
 %changelog
+* Mon Jan 24 2011 Jason L Tibbitts III <tibbs@math.uh.edu> - 0.7.9-1
+- Update to current upstream version.
+- Handle new upstream treatment of the examples.
+- Update to modern packaging guidelines.
+
 * Tue Dec 21 2010 Marcela Maslanova <mmaslano@redhat.com> - 0.7.5-7
 - 661697 rebuild for fixing problems with vendorach/lib
 
