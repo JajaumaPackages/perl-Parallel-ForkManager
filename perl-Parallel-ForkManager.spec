@@ -1,6 +1,6 @@
 Name:           perl-Parallel-ForkManager
 Version:        0.7.9
-Release:        8%{?dist}
+Release:        9%{?dist}
 Summary:        Simple parallel processing fork manager
 License:        GPL+ or Artistic
 Group:          Development/Libraries
@@ -48,6 +48,9 @@ make test
 %{_mandir}/man3/*
 
 %changelog
+* Sun Aug 04 2013 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 0.7.9-9
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_20_Mass_Rebuild
+
 * Thu Jul 18 2013 Petr Pisar <ppisar@redhat.com> - 0.7.9-8
 - Perl 5.18 rebuild
 
