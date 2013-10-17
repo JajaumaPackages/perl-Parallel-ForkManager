@@ -1,13 +1,13 @@
 Name:           perl-Parallel-ForkManager
-Version:        0.7.9
-Release:        9%{?dist}
+Version:        1.05
+Release:        1%{?dist}
 Summary:        Simple parallel processing fork manager
 License:        GPL+ or Artistic
 Group:          Development/Libraries
 URL:            http://search.cpan.org/dist/Parallel-ForkManager/
-Source0:        http://search.cpan.org/CPAN/authors/id/D/DL/DLUX/Parallel-ForkManager-%{version}.tar.gz
+Source0:        http://search.cpan.org/CPAN/authors/id/S/SZ/SZABGAB/Parallel-ForkManager-%{version}.tar.gz
 BuildArch:      noarch
-BuildRequires:  perl(ExtUtils::MakeMaker)
+BuildRequires:  perl(ExtUtils::MakeMaker) perl(Test::More) perl(utf8::all)
 Requires:       perl(:MODULE_COMPAT_%(eval "`%{__perl} -V:version`"; echo $version))
 
 %description
@@ -43,11 +43,15 @@ make test
 
 %files
 %defattr(-,root,root,-)
-%doc Changes TODO examples/
+%doc Changes examples/
 %{perl_vendorlib}/*
 %{_mandir}/man3/*
 
 %changelog
+* Thu Oct 17 2013 Jason L Tibbitts III <tibbs@math.uh.edu> - 1.05-1
+- Update to 1.05; new source location, additional build deps.  Should fix the
+  longstanding security bug, 751886.
+
 * Sun Aug 04 2013 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 0.7.9-9
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_20_Mass_Rebuild
 
