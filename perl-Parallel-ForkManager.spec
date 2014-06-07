@@ -1,6 +1,6 @@
 Name:           perl-Parallel-ForkManager
 Version:        1.05
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Simple parallel processing fork manager
 License:        GPL+ or Artistic
 Group:          Development/Libraries
@@ -48,6 +48,9 @@ make test
 %{_mandir}/man3/*
 
 %changelog
+* Sat Jun 07 2014 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1.05-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_21_Mass_Rebuild
+
 * Thu Oct 17 2013 Jason L Tibbitts III <tibbs@math.uh.edu> - 1.05-1
 - Update to 1.05; new source location, additional build deps.  Should fix the
   longstanding security bug, 751886.
