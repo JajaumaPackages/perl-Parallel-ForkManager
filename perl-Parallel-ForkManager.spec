@@ -1,6 +1,6 @@
 Name:           perl-Parallel-ForkManager
 Version:        1.05
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        Simple parallel processing fork manager
 License:        GPL+ or Artistic
 Group:          Development/Libraries
@@ -48,6 +48,9 @@ make test
 %{_mandir}/man3/*
 
 %changelog
+* Fri Aug 29 2014 Jitka Plesnikova <jplesnik@redhat.com> - 1.05-3
+- Perl 5.20 rebuild
+
 * Sat Jun 07 2014 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1.05-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_21_Mass_Rebuild
 
