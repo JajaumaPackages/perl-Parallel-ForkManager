@@ -1,11 +1,11 @@
 Name:           perl-Parallel-ForkManager
-Version:        1.05
-Release:        3%{?dist}
+Version:        1.12
+Release:        1%{?dist}
 Summary:        Simple parallel processing fork manager
 License:        GPL+ or Artistic
 Group:          Development/Libraries
 URL:            http://search.cpan.org/dist/Parallel-ForkManager/
-Source0:        http://search.cpan.org/CPAN/authors/id/S/SZ/SZABGAB/Parallel-ForkManager-%{version}.tar.gz
+Source0:        http://search.cpan.org/CPAN/authors/id/Y/YA/YANICK/Parallel-ForkManager-%{version}.tar.gz
 BuildArch:      noarch
 BuildRequires:  perl(ExtUtils::MakeMaker) perl(Test::More) perl(utf8::all)
 Requires:       perl(:MODULE_COMPAT_%(eval "`%{__perl} -V:version`"; echo $version))
@@ -48,6 +48,10 @@ make test
 %{_mandir}/man3/*
 
 %changelog
+* Tue Feb 24 2015 Jason L Tibbitts III <tibbs@math.uh.edu> - 1.12-1
+- Update to latest upstream version.
+- Use most direct download location.
+
 * Fri Aug 29 2014 Jitka Plesnikova <jplesnik@redhat.com> - 1.05-3
 - Perl 5.20 rebuild
 
