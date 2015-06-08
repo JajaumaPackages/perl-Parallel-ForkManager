@@ -1,6 +1,6 @@
 Name:           perl-Parallel-ForkManager
 Version:        1.12
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Simple parallel processing fork manager
 License:        GPL+ or Artistic
 Group:          Development/Libraries
@@ -48,6 +48,9 @@ make test
 %{_mandir}/man3/*
 
 %changelog
+* Mon Jun 08 2015 Jitka Plesnikova <jplesnik@redhat.com> - 1.12-2
+- Perl 5.22 rebuild
+
 * Tue Feb 24 2015 Jason L Tibbitts III <tibbs@math.uh.edu> - 1.12-1
 - Update to latest upstream version.
 - Use most direct download location.
