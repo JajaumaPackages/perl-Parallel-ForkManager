@@ -1,6 +1,6 @@
 Name:           perl-Parallel-ForkManager
-Version:        1.12
-Release:        3%{?dist}
+Version:        1.14
+Release:        1%{?dist}
 Summary:        Simple parallel processing fork manager
 License:        GPL+ or Artistic
 Group:          Development/Libraries
@@ -48,6 +48,9 @@ make test
 %{_mandir}/man3/*
 
 %changelog
+* Tue Jun 23 2015 Marianne Lombard <jehane@fedoraproject.org> - 1.14
+- Update to latest upstream version
+
 * Thu Jun 18 2015 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1.12-3
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_23_Mass_Rebuild
 
