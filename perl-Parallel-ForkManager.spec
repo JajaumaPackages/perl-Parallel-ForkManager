@@ -1,5 +1,5 @@
 Name:           perl-Parallel-ForkManager
-Version:        1.16
+Version:        1.17
 Release:        1%{?dist}
 Summary:        Simple parallel processing fork manager
 License:        GPL+ or Artistic
@@ -49,6 +49,9 @@ make test
 %{_mandir}/man3/*
 
 %changelog
+* Wed Dec 02 2015 Jason L Tibbitts III <tibbs@math.uh.edu> - 1.17-1
+- Update to 1.17.
+
 * Thu Oct 08 2015 Jason L Tibbitts III <tibbs@math.uh.edu> - 1.16-1
 - Update to 1.16; rhbz#1270082.  Add new Test::Warn build dep.
 
