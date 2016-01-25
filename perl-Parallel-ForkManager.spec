@@ -1,6 +1,6 @@
 Name:           perl-Parallel-ForkManager
 Version:        1.17
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Simple parallel processing fork manager
 License:        GPL+ or Artistic
 Group:          Development/Libraries
@@ -43,12 +43,14 @@ find %{buildroot} -depth -type d -exec rmdir {} 2>/dev/null \;
 make test
 
 %files
-%defattr(-,root,root,-)
 %doc Changes examples/
 %{perl_vendorlib}/*
 %{_mandir}/man3/*
 
 %changelog
+* Mon Jan 25 2016 Jason L Tibbitts III <tibbs@math.uh.edu> - 1.17-2
+- Remove pointless %%defattr statement.
+
 * Wed Dec 02 2015 Jason L Tibbitts III <tibbs@math.uh.edu> - 1.17-1
 - Update to 1.17.
 
