@@ -1,6 +1,6 @@
 Name:           perl-Parallel-ForkManager
 Version:        1.17
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        Simple parallel processing fork manager
 License:        GPL+ or Artistic
 Group:          Development/Libraries
@@ -48,6 +48,9 @@ make test
 %{_mandir}/man3/*
 
 %changelog
+* Thu Feb 04 2016 Fedora Release Engineering <releng@fedoraproject.org> - 1.17-3
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_24_Mass_Rebuild
+
 * Mon Jan 25 2016 Jason L Tibbitts III <tibbs@math.uh.edu> - 1.17-2
 - Remove pointless %%defattr statement.
 
