@@ -1,6 +1,6 @@
 Name:           perl-Parallel-ForkManager
-Version:        1.17
-Release:        3%{?dist}
+Version:        1.18
+Release:        1%{?dist}
 Summary:        Simple parallel processing fork manager
 License:        GPL+ or Artistic
 Group:          Development/Libraries
