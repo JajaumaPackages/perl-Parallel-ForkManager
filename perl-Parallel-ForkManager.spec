@@ -1,6 +1,6 @@
 Name:           perl-Parallel-ForkManager
 Version:        1.18
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Simple parallel processing fork manager
 License:        GPL+ or Artistic
 Group:          Development/Libraries
@@ -24,7 +24,7 @@ use is a downloader which will be retrieving hundreds/thousands of files.
 sed -i -e '1d' examples/*.pl
 chmod 644 examples/*.pl
 
-i=ForkManager.pm
+i=lib/Parallel/ForkManager.pm
 iconv -f iso-8859-1 -t utf-8 < $i > $i. && touch -r $i $i. && mv -f $i. $i
 
 %build
@@ -48,6 +48,9 @@ make test
 %{_mandir}/man3/*
 
 %changelog
+* Thu Mar 31 2016 Jason L Tibbitts III <tibbs@math.uh.edu> - 1.18-2
+- Run iconv on the right file.
+
 * Tue Mar 29 2016 Jason L Tibbitts III <tibbs@math.uh.edu> - 1.18-1
 - Update to 1.18.
 
