@@ -1,6 +1,6 @@
 Name:           perl-Parallel-ForkManager
 Version:        1.18
-Release:        3%{?dist}
+Release:        4%{?dist}
 Summary:        Simple parallel processing fork manager
 License:        GPL+ or Artistic
 Group:          Development/Libraries
@@ -49,8 +49,11 @@ make test
 %{_mandir}/man3/*
 
 %changelog
-* Thu May 05 2016 Jason L Tibbitts III <tibbs@math.uh.edu> - 1.18-3
+* Thu Jun 23 2016 Jason L Tibbitts III <tibbs@math.uh.edu> - 1.18-4
 - Change build dependencies to new recommended usage.
+
+* Sun May 15 2016 Jitka Plesnikova <jplesnik@redhat.com> - 1.18-3
+- Perl 5.24 rebuild
 
 * Thu Mar 31 2016 Jason L Tibbitts III <tibbs@math.uh.edu> - 1.18-2
 - Run iconv on the right file.
