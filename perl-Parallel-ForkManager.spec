@@ -1,12 +1,13 @@
 Name:           perl-Parallel-ForkManager
 Version:        1.18
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        Simple parallel processing fork manager
 License:        GPL+ or Artistic
 Group:          Development/Libraries
 URL:            http://search.cpan.org/dist/Parallel-ForkManager/
 Source0:        http://search.cpan.org/CPAN/authors/id/Y/YA/YANICK/Parallel-ForkManager-%{version}.tar.gz
 BuildArch:      noarch
+BuildRequires:  perl perl-build
 BuildRequires:  perl(ExtUtils::MakeMaker) perl(Test::More) perl(utf8::all)
 BuildRequires:  perl(Storable) perl(Time::HiRes) perl(Test::Warn)
 Requires:       perl(:MODULE_COMPAT_%(eval "`%{__perl} -V:version`"; echo $version))
@@ -48,6 +49,9 @@ make test
 %{_mandir}/man3/*
 
 %changelog
+* Thu May 05 2016 Jason L Tibbitts III <tibbs@math.uh.edu> - 1.18-3
+- Change build dependencies to new recommended usage.
+
 * Thu Mar 31 2016 Jason L Tibbitts III <tibbs@math.uh.edu> - 1.18-2
 - Run iconv on the right file.
 
