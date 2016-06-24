@@ -8,6 +8,7 @@ URL:            http://search.cpan.org/dist/Parallel-ForkManager/
 Source0:        http://search.cpan.org/CPAN/authors/id/Y/YA/YANICK/Parallel-ForkManager-%{version}.tar.gz
 BuildArch:      noarch
 BuildRequires:  perl perl-build
+BuildRequires:  perl-generators
 BuildRequires:  perl(ExtUtils::MakeMaker) perl(Test::More) perl(utf8::all)
 BuildRequires:  perl(Storable) perl(Time::HiRes) perl(Test::Warn)
 Requires:       perl(:MODULE_COMPAT_%(eval "`%{__perl} -V:version`"; echo $version))
