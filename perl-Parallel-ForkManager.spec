@@ -7,7 +7,7 @@ Group:          Development/Libraries
 URL:            http://search.cpan.org/dist/Parallel-ForkManager/
 Source0:        http://search.cpan.org/CPAN/authors/id/Y/YA/YANICK/Parallel-ForkManager-%{version}.tar.gz
 BuildArch:      noarch
-BuildRequires:  perl perl-build
+BuildRequires:  perl perl-generators
 BuildRequires:  perl(ExtUtils::MakeMaker) perl(Test::More) perl(utf8::all)
 BuildRequires:  perl(Storable) perl(Time::HiRes) perl(Test::Warn)
 Requires:       perl(:MODULE_COMPAT_%(eval "`%{__perl} -V:version`"; echo $version))
@@ -49,6 +49,9 @@ make test
 %{_mandir}/man3/*
 
 %changelog
+* Mon Jun 27 2016 Jason L Tibbitts III <tibbs@math.uh.edu> - 1.18-4
+- Oops, wrong build dep.
+
 * Thu Jun 23 2016 Jason L Tibbitts III <tibbs@math.uh.edu> - 1.18-4
 - Change build dependencies to new recommended usage.
 
