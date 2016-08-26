@@ -1,15 +1,38 @@
 Name:           perl-Parallel-ForkManager
-Version:        1.18
-Release:        5%{?dist}
+Version:        1.19
+Release:        1%{?dist}
 Summary:        Simple parallel processing fork manager
 License:        GPL+ or Artistic
 Group:          Development/Libraries
 URL:            http://search.cpan.org/dist/Parallel-ForkManager/
 Source0:        http://search.cpan.org/CPAN/authors/id/Y/YA/YANICK/Parallel-ForkManager-%{version}.tar.gz
 BuildArch:      noarch
-BuildRequires:  perl perl-generators
-BuildRequires:  perl(ExtUtils::MakeMaker) perl(Test::More) perl(utf8::all)
-BuildRequires:  perl(Storable) perl(Time::HiRes) perl(Test::Warn)
+BuildRequires:  coreutils
+BuildRequires:  findutils
+BuildRequires:  glibc-common
+BuildRequires:  make
+BuildRequires:  perl
+BuildRequires:  perl-generators
+BuildRequires:  perl(ExtUtils::MakeMaker)
+BuildRequires:  perl(strict)
+BuildRequires:  perl(warnings)
+BuildRequires:  sed
+# Run-time
+BuildRequires:  perl(Carp)
+BuildRequires:  perl(File::Path)
+BuildRequires:  perl(File::Spec)
+BuildRequires:  perl(File::Temp)
+BuildRequires:  perl(POSIX)
+BuildRequires:  perl(Storable)
+# Tests
+BuildRequires:  perl(IO::Handle)
+BuildRequires:  perl(IPC::Open3)
+BuildRequires:  perl(Test::More) >= 0.94
+BuildRequires:  perl(Test::Warn)
+BuildRequires:  perl(utf8::all)
+#perl(Time::HiRes)
+
+
 Requires:       perl(:MODULE_COMPAT_%(eval "`%{__perl} -V:version`"; echo $version))
 
 %description
@@ -49,6 +72,9 @@ make test
 %{_mandir}/man3/*
 
 %changelog
+* Fri Aug 26 2016 Jitka Plesnikova <jplesnik@redhat.com> - 1.19-1
+- 1.19 bump
+
 * Mon Jun 27 2016 Jason L Tibbitts III <tibbs@math.uh.edu> - 1.18-5
 - Oops, wrong build dep.
 
