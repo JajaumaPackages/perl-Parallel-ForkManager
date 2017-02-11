@@ -1,6 +1,6 @@
 Name:           perl-Parallel-ForkManager
 Version:        1.19
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Simple parallel processing fork manager
 License:        GPL+ or Artistic
 Group:          Development/Libraries
@@ -72,6 +72,9 @@ make test
 %{_mandir}/man3/*
 
 %changelog
+* Sat Feb 11 2017 Fedora Release Engineering <releng@fedoraproject.org> - 1.19-2
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_26_Mass_Rebuild
+
 * Fri Aug 26 2016 Jitka Plesnikova <jplesnik@redhat.com> - 1.19-1
 - 1.19 bump
 
