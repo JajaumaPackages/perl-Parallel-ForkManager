@@ -11,7 +11,7 @@ BuildRequires:  coreutils
 BuildRequires:  findutils
 BuildRequires:  glibc-common
 BuildRequires:  make
-BuildRequires:  perl
+BuildRequires:  perl-interpreter
 BuildRequires:  perl-generators
 BuildRequires:  perl(ExtUtils::MakeMaker)
 BuildRequires:  perl(strict)
