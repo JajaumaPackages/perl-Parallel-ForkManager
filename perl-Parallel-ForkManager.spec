@@ -1,3 +1,6 @@
+# Run optional test
+%bcond_without perl_Parallel_ForkManager_enables_optional_test
+
 Name:           perl-Parallel-ForkManager
 Version:        1.19
 Release:        4%{?dist}
@@ -29,8 +32,10 @@ BuildRequires:  perl(IO::Handle)
 BuildRequires:  perl(IPC::Open3)
 BuildRequires:  perl(Test::More) >= 0.94
 BuildRequires:  perl(Test::Warn)
+%if %{with perl_Parallel_ForkManager_enables_optional_test}
+# Optional tests
 BuildRequires:  perl(utf8::all)
-#perl(Time::HiRes)
+%endif
 
 
 Requires:       perl(:MODULE_COMPAT_%(eval "`%{__perl} -V:version`"; echo $version))
