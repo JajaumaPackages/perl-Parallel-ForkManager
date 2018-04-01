@@ -1,5 +1,5 @@
 # Run optional test
-%bcond_without perl_Parallel_ForkManager_enables_optional_test
+%bcond_with perl_Parallel_ForkManager_enables_optional_test
 
 Name:           perl-Parallel-ForkManager
 Version:        1.19
